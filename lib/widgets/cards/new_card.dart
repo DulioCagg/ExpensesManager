@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Describes the functionality of adding a card
 class NewCard extends StatefulWidget {
   final Function addCard;
 
@@ -10,11 +11,13 @@ class NewCard extends StatefulWidget {
 }
 
 class _NewCardState extends State<NewCard> {
+  // Defines all the camps of the form required to enter a card
   final _numberCon = TextEditingController();
   final _bankCon = TextEditingController();
   final _budgetCon = TextEditingController();
   final _validThroCon = TextEditingController();
 
+  // Checks if the form has any empty spaces, if its empty it doesnt allow to add the card
   void onSubmit() {
     if (_numberCon.text.isEmpty ||
         _bankCon.text.isEmpty ||
@@ -23,12 +26,14 @@ class _NewCardState extends State<NewCard> {
       return;
     }
 
+    // Adds the card to the cards carray
     widget.addCard(_numberCon.text, _bankCon.text,
         double.parse(_budgetCon.text) ?? 0, _validThroCon.text);
 
     Navigator.of(context).pop();
   }
 
+  // Describes the interface of the form
   @override
   Widget build(BuildContext context) {
     return Card(

@@ -3,12 +3,15 @@ import 'package:intl/intl.dart';
 
 import '../../models/card.dart';
 
+// Describes the component that shows the expenses list
 class ExpenseList extends StatelessWidget {
+  // Initializes the card and the delete function
   final UserCard card;
   final Function deleteExpense;
 
   ExpenseList(this.card, this.deleteExpense);
 
+  // Describes the interface of the expense list and pass the delete function to each component
   @override
   Widget build(BuildContext context) {
     return Container(

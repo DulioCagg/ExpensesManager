@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+// Describes the total shown of either a card or an expense
 class Total extends StatelessWidget {
   final double total;
 
   Total(this.total);
 
+  // Describes the interface of the total
   @override
   Widget build(BuildContext context) {
     return Container(

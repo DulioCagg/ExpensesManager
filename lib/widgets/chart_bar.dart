@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Describes the bars used inside the chart
 class ChartBar extends StatelessWidget {
   final String label;
   final double amount;
@@ -7,6 +8,7 @@ class ChartBar extends StatelessWidget {
 
   ChartBar(this.label, this.amount, this.amountPct);
 
+  // Describes the interface of the bar
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(

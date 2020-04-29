@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 
+// Describes the structure of the expenses
 class Expense {
   final String id;
   final String concept;
@@ -15,4 +16,17 @@ class Expense {
       @required this.amount,
       @required this.date,
       @required this.category});
+
+  // Method to transform the object into a json
+  Map toJson() {
+    Map exp = {
+      "id": id,
+      "concept": concept,
+      "place": place,
+      "amount": amount,
+      "date": date.toString(),
+      "category": category,
+    };
+    return exp;
+  }
 }
